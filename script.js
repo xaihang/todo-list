@@ -20,10 +20,14 @@ while (input !== 'quit' && input !== 'q') {
 
         //delete todos 
     } else if (input === 'delete') {
-        const indexStr = prompt('Enter an index to delete:');
-        const index = parseInt(indexStr);
-        const deleted = todos.splice(index, 1);
-        console.log(`Deleted: ${deleted[0]}`);
+        const indexStr = parseInt(prompt('Enter an index to delete:'));
+        if (!Number.isNaN(index)) {
+            const deleted = todos.splice(index, 1);
+            console.log(`Deleted: ${deleted[0]}`);
+        } else {
+            console.log('Uknown index');
+        }
+
     }
     input = prompt('What would you like to do?')
 }
