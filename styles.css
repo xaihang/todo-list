@@ -28,7 +28,7 @@ header, form {
     align-items: center;
 }
 
-/* ------- form & button -------- */
+/* ------- form & add button -------- */
 form input, form button {
     font-size: 1.8rem;
     border: none;
@@ -77,4 +77,79 @@ form button:hover {
 
 .todo li {
     flex: 1; 
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+/* ------- complete & trash buttons -------- */
+.trash-btn, .complete-btn {
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    padding: 1rem; 
+    cursor: pointer;
+
+}
+
+.trash-btn {
+    background-color: #D1F2EB;
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+}
+
+.complete-btn {
+    background-color: #A3E4D7;
+}
+
+/* ------- task transitions -------- */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+/* ------- select section  -------- */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3rem;
+}
+
+select {
+    color: #581845;
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    background-color: #FF5733;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    content: "\25BC";
+    position: absolute;
+    transition: all 0.3 ease;
+}
+
+.select:hover::after {
+background-color: white;
+color: #FFC300;
 }
