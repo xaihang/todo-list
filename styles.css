@@ -28,12 +28,53 @@ header, form {
     align-items: center;
 }
 
-/* ------- form -------- */
+/* ------- form & button -------- */
 form input, form button {
-    padding: 0.5rem;
-    padding-left: 1rem;
     font-size: 1.8rem;
     border: none;
     background-color: white;
     border-radius: 2rem;
+    padding: .5rem;
+}
+
+form button {
+    color: #FF5733;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    margin-left: 0.5rem;
+}
+
+form button:hover {
+    color: white;
+    background-color: #FFC300;
+}
+
+/* ------- todo container & list -------- */
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none; 
+}
+
+.todo {
+    color: black;
+    font-size: 1.5rem; 
+    background-color: white;
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 2rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.todo li {
+    flex: 1; 
 }
