@@ -10,16 +10,25 @@
 
 <body>
 
-    <h1>Todo List ✨</h1>
-    <ul>
-        <li>"new" - Add a Todo</li>
-        <li>"list" - List All Todos</li>
-        <li>"delete" - Remove Specific Todo</li>
-        <li>"quit" - Quit App</li>
-    </ul>
+    <header>
+        <h1>My To do List</h1>
+    </header>
+    <form action="">
+        <input type="text" class="todo-list">
+        <button class="todo-button" type="submit">
+            <i class=""fas fa-plus-circle fa-lg"></i>
+        </button>
+        <div class="select">
+            <select>
+                <option>All</option>
+                <option>Incomplete</option>
+                <option>Completed</option>
+            </select>
+        </div>
+    </form>
+
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
