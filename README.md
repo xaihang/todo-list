@@ -2,7 +2,9 @@
 
 
 ## SUMMARY:
-A to do list with prompts using while loops conditional statements.
+A to do list with add button and drop down option for completed or incomplete option.
+
+Using HTML, CSS, and vanilla JS
 
 ## DEPLOYED LINK: https://xaihang.github.io/todo-list/
 
