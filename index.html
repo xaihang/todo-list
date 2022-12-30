@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+
+    <!-- stylesheet link -->
     <link rel="stylesheet" href="./styles.css">
+
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/2de1a27f04.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -16,17 +23,22 @@
     <form action="">
         <input type="text" class="todo-list">
         <button class="todo-button" type="submit">
-            <i class=""fas fa-plus-circle fa-lg"></i>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
         </button>
         <div class="select">
             <select>
-                <option>All</option>
-                <option>Incomplete</option>
-                <option>Completed</option>
+                <option value="all">All</option>
+                <option value="incomplete">Incomplete</option>
+                <option value="completed'">Completed</option>
             </select>
         </div>
     </form>
 
+    <div class="todo-container">
+        <ul class="todo-list">
+
+        </ul>
+    </div>
 
     <script src="script.js"></script>
 
