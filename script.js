@@ -53,7 +53,7 @@ function deleteCheck(e) {
 
 function filterTodo(e) {
     const todos = todoList.childNodes;
-    todos.forEach(function(todo)) {
+    todos.forEach(function(todo) {
         switch(e.target.value) {
             case 'all': 
                 todo.style.display = 'flex';
@@ -73,6 +73,20 @@ function filterTodo(e) {
                 }
                 break;
         }
-    }
+    });
 }
 
+function saveLocalTodos(todo) {
+    let todos;
+    if(localStorage.getItem('todos') === null) {
+        todos = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
+    todos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(todos)); 
+}
+
+function getLocalTodos() {
+    
+}
