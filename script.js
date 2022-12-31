@@ -109,9 +109,22 @@ function getLocalTodos() {
 
         const trashButton = document.createElement('button');
         trashButton.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
-        trashButton.classList.add('complete-btn');
+        trashButton.classList.add('trash-btn');
         todoDiv.appendChild(trashButton);
 
         todoList.appendChild(todoDiv);
     });
+}
+
+function removeLocalTodos(todo) {
+    let todos;
+    if(localStorage.getItem('todos') === null) {
+        todo = [];
+    } else {
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
+
+    const todoIndex = todo.children[0].innerText;
+    todos.splice(todos.indexOf(todoIndex), 1);
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
