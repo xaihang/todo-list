@@ -1,7 +1,7 @@
 const todoInput = document.querySelector('.todo-list');
 const todoButton = document.querySelector('.todo-button'); 
 const todoList = document.querySelector('todo-list');
-const filterOption = document.querySelector('.filter.-todo');
+const filterOption = document.querySelector('.filter-todo');
 
 document.addEventListener('DOMContentLoaded', getLocalTodos);
 todoButton.addEventListener('click', addTodo);
@@ -20,7 +20,7 @@ function addTodo(event) {
     saveLocalTodos(todoInput.value);
 
     const completedButton = document.createElement('button');
-    completedButton.innerHTML = '<i class="fa fa-plus-circle" aria-hidden="true"></i>';
+    completedButton.innerHTML = '<i class="fa fa-check-circle" aria-hidden="true"></i>';
     completedButton.classList.add('completed-btn'); 
     todoDiv.appendChild(completedButton);
 
@@ -30,7 +30,7 @@ function addTodo(event) {
     todoDiv.appendChild(trashButton);
 
     todoList.appendChild(todoDiv);
-    todoInput.value = '';
+    todoInput.value = "";
 }
 
 function deleteCheck(e) {
@@ -41,10 +41,11 @@ function deleteCheck(e) {
         todo.classList.add('slide');
 
         removeLocalTodos(todo);
-        todo.addEventListener('transitioned', function() {
+        todo.addEventListener('transitionend', function() {
             todo.remove();
         });
     }
+
     if(item.classList[0] === 'complete-btn') {
         const todo = item.parentElement;
         todo.classList.toggle('completed');
@@ -61,14 +62,14 @@ function filterTodo(e) {
             case 'completed': 
                 if(todo.classList.contains('completed')) {
                     todo.style.display = 'flex';
-                }else {
+                } else {
                     todo.style.display = 'none';
                 }
                 break;
             case 'incomplete':
                 if(!todo.classList.contains('completed')) {
                 todo.style.display = 'flex';
-                }else {
+                } else {
                     todo.style.display = 'none';
                 }
                 break;

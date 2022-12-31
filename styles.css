@@ -35,6 +35,8 @@ form input, form button {
     background-color: white;
     border-radius: 2rem;
     padding: .5rem;
+    padding-left: 1rem;
+
 }
 
 form button {
@@ -48,6 +50,11 @@ form button {
 form button:hover {
     color: white;
     background-color: #FFC300;
+}
+
+.fa-plus-circle {
+    margin-top: 0.3rem;
+    margin-left: -8px;
 }
 
 /* ------- todo container & list -------- */
